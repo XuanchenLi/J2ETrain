@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="JPARelation" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<class>entity.jpa.one2one1.Address</class>
+		<class>entity.jpa.one2one1.Student</class>
+		<properties>
+           <property name="eclipselink.logging.level" value="FINE" />
+           <property name="eclipselink.jdbc.driver" value="com.mysql.jdbc.Driver" />  
+           <property name="eclipselink.jdbc.url" value="jdbc:mysql://localhost:3306/javaee" />
+           <property name="eclipselink.jdbc.password" value="zkxaihxb2" />
+           <property name="eclipselink.jdbc.user" value="root" /> 
+        </properties>
+	</persistence-unit>
+    <persistence-unit name="JPARelation2" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>entity.jpa.one2one2.Address2</class>
+        <class>entity.jpa.one2one2.Student2</class>
+        <properties>
+            <property name="eclipselink.logging.level" value="FINE" />
+            <property name="eclipselink.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <property name="eclipselink.jdbc.url" value="jdbc:mysql://localhost:3306/javaee" />
+            <property name="eclipselink.jdbc.password" value="zkxaihxb2" />
+            <property name="eclipselink.jdbc.user" value="root" />
+        </properties>
+    </persistence-unit>
+    <persistence-unit name="one2many1" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+<!--        <jta-data-source>java:jboss/datasources/MySqlDS</jta-data-source>-->
+        <class>entity.jpa.one2many1.Student_o2m1</class>
+        <class>entity.jpa.one2many1.Teacher_o2m1</class>
+        <properties>
+            <property name="eclipselink.logging.level" value="FINE" />
+            <property name="eclipselink.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <property name="eclipselink.jdbc.url" value="jdbc:mysql://localhost:3306/javaee" />
+            <property name="eclipselink.jdbc.password" value="zkxaihxb2" />
+            <property name="eclipselink.jdbc.user" value="root" />
+        </properties>
+    </persistence-unit>
+    <persistence-unit name="one2many1_2" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+<!--        <jta-data-source>java:jboss/datasources/MySqlDS</jta-data-source>-->
+        <class>entity.jpa.one2many1_2.Student_o2m1_2</class>
+        <class>entity.jpa.one2many1_2.Teacher_o2m1_2</class>
+        <properties>
+            <property name="eclipselink.logging.level" value="FINE" />
+            <property name="eclipselink.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <property name="eclipselink.jdbc.url" value="jdbc:mysql://localhost:3306/javaee" />
+            <property name="eclipselink.jdbc.password" value="zkxaihxb2" />
+            <property name="eclipselink.jdbc.user" value="root" />
+        </properties>
+    </persistence-unit>
+    <persistence-unit name="one2many2" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+<!--        <jta-data-source>java:jboss/datasources/MySqlDS</jta-data-source>-->
+        <class>entity.jpa.one2many2.Student_o2m2</class>
+        <class>entity.jpa.one2many2.Teacher_o2m2</class>
+        <properties>
+            <property name="eclipselink.logging.level" value="FINE" />
+            <property name="eclipselink.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <property name="eclipselink.jdbc.url" value="jdbc:mysql://localhost:3306/javaee" />
+            <property name="eclipselink.jdbc.password" value="zkxaihxb2" />
+            <property name="eclipselink.jdbc.user" value="root" />
+        </properties>
+    </persistence-unit>
+    <persistence-unit name="many2many1" transaction-type="JTA">
+<!--        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>-->
+        <jta-data-source>java:jboss/datasources/MySqlDS</jta-data-source>
+        <class>entity.jpa.many2many1.Student_m2m1</class>
+        <class>entity.jpa.many2many1.Teacher_m2m1</class>
+<!--        <properties>-->
+<!--            <property name="eclipselink.logging.level" value="FINE" />-->
+<!--            <property name="eclipselink.jdbc.driver" value="com.mysql.jdbc.Driver" />-->
+<!--            <property name="eclipselink.jdbc.url" value="jdbc:mysql://localhost:3306/javaee" />-->
+<!--            <property name="eclipselink.jdbc.password" value="zkxaihxb2" />-->
+<!--            <property name="eclipselink.jdbc.user" value="root" />-->
+<!--        </properties>-->
+    </persistence-unit>
+    <persistence-unit name="many2many2" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+<!--        <jta-data-source>java:jboss/datasources/MySqlDS</jta-data-source>-->
+        <class>entity.jpa.many2many2.Student_m2m2</class>
+        <class>entity.jpa.many2many2.Teacher_m2m2</class>
+        <properties>
+            <property name="eclipselink.logging.level" value="FINE" />
+            <property name="eclipselink.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <property name="eclipselink.jdbc.url" value="jdbc:mysql://localhost:3306/javaee" />
+            <property name="eclipselink.jdbc.password" value="zkxaihxb2" />
+            <property name="eclipselink.jdbc.user" value="root" />
+        </properties>
+    </persistence-unit>
+    <persistence-unit name="many2many3" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+<!--        <jta-data-source>java:jboss/datasources/MySqlDS</jta-data-source>-->
+        <class>entity.jpa.many2many3.Student_m2m3</class>
+        <class>entity.jpa.many2many3.Teacher_m2m3</class>
+        <class>entity.jpa.many2many3.Course</class>
+        <properties>
+            <property name="eclipselink.logging.level" value="FINE" />
+            <property name="eclipselink.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <property name="eclipselink.jdbc.url" value="jdbc:mysql://localhost:3306/javaee" />
+            <property name="eclipselink.jdbc.password" value="zkxaihxb2" />
+            <property name="eclipselink.jdbc.user" value="root" />
+        </properties>
+    </persistence-unit>
+</persistence>
